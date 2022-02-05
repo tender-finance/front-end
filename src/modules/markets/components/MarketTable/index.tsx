@@ -53,6 +53,8 @@ export default function MarketTable({
       title: messages.stable,
       sortKey: 'stableBorrowRate',
     },
+    {},
+    {},
   ];
 
   return (
@@ -69,7 +71,7 @@ export default function MarketTable({
                 setSortDesc={setSortDesc}
                 sortKey={column.sortKey}
                 withSorting={true}
-                title={intl.formatMessage(column.title)}
+                title={column.title ? intl.formatMessage(column.title) : ''}
                 size="small"
               />
             </TableColumn>
@@ -83,8 +85,8 @@ export default function MarketTable({
                 setSortDesc={setSortDesc}
                 sortKey={column.sortKey}
                 withSorting={true}
-                title={intl.formatMessage(messages.borrowAPY)}
-                subTitle={intl.formatMessage(column.title)}
+                title={column.title ? intl.formatMessage(messages.borrowAPY) : ''}
+                subTitle={column.title ? intl.formatMessage(column.title) : ''}
                 size="small"
               />
             </TableColumn>

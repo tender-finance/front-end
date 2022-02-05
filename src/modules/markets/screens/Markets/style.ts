@@ -77,9 +77,9 @@ const staticStyles = css.global`
     }
 
     &__price-switcher {
-      margin-top: 30px;
+      margin-top: 50px;
       @include respond-to(xl) {
-        margin-top: 20px;
+        margin-top: 50px;
       }
       @include respond-to(sm) {
         display: none;

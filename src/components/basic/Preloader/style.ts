@@ -13,6 +13,7 @@ const staticStyles = css.global`
     flex: 1;
     text-align: center;
     padding: 10px;
+    display: none;
 
     &__text {
       margin-bottom: 20px;

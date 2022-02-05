@@ -4,6 +4,38 @@ import css from 'styled-jsx/css';
 const staticStyles = css.global`
   @import 'src/_mixins/vars';
   @import 'src/_mixins/screen-size';
+  .linkDeposit {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    width: 100%;
+    max-width: 120px;
+    padding: 0 10px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .linkBorrow {
+    border: 1px solid #54ce90;
+    background: #54ce90;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    width: 100%;
+    max-width: 120px;
+    padding: 0 10px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+  }
 
   .MarketTableItem {
     min-height: 70px;
@@ -18,10 +50,18 @@ const staticStyles = css.global`
     }
 
     &__column {
+      p {
+        color: #aec0cf !important;
+        font-weight: normal !important;
+      }
+      span {
+        color: #aec0cf !important;
+        font-weight: normal !important;
+      }
       &:first-child {
         align-items: flex-start;
         justify-content: flex-start;
-        min-width: 270px;
+        min-width: 200px;
         @media only screen and (max-width: 850px) {
           min-width: 80px;
         }

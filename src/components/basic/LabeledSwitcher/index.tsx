@@ -58,10 +58,21 @@ export default function LabeledSwitcher({
       />
 
       <style jsx={true} global={true}>{`
+        .LabeledSwitch__inner {
+          background: #1c1e22 !important;
+          border-radius: 4px !important;
+          border-color: #1c1e22 !important;
+          border-radius: 4px;
+          overflow: hidden;
+          height: 45px;
+        }
         .LabeledSwitch {
           &__pointer {
+            padding: 0;
+            border-radius: 4px;
+            overflow: hidden;
             span {
-              background: ${currentTheme.white.hex};
+              background: #54ce90;
             }
           }
 
@@ -76,13 +87,19 @@ export default function LabeledSwitcher({
 
           button {
             span {
-              background: ${currentTheme.white.hex};
+              font-style: normal;
+              font-weight: 900;
+              font-size: 16px !important;
+              line-height: 19px;
+              text-align: center;
+              color: #76899b !important;
+              -webkit-text-fill-color: #76899b !important;
             }
           }
-
           button.LabeledSwitch__buttonActive {
             span {
-              background-image: ${gradientText};
+              color: #fff !important;
+              -webkit-text-fill-color: #fff !important;
             }
           }
         }
@@ -94,8 +111,9 @@ export default function LabeledSwitcher({
           }
 
           .LabeledSwitch__pointer {
+            padding: 0;
             span {
-              background: ${currentTheme.whiteElement.hex};
+              background: #54ce90;
             }
           }
 

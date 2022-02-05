@@ -35,8 +35,7 @@ const staticStyles = css.global`
     display: flex;
     flex-direction: column;
     flex: auto;
-    overflow: hidden;
-    height: 1px;
+
     &__content {
       display: flex;
       flex-direction: column;

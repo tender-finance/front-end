@@ -42,16 +42,21 @@ export default function TableItemWrapper({
       <style jsx={true}>{staticStyles}</style>
       <style jsx={true}>{`
         .TableItemWrapper {
-          background: ${darkOnDarkMode
-            ? currentTheme.whiteItem.hex
-            : currentTheme.whiteElement.hex};
-          color: ${currentTheme.darkBlue.hex};
-          &:hover {
-            box-shadow: 0 0 9px 0 ${currentTheme.primary.hex};
-          }
-          &:active {
-            border-color: ${currentTheme.primary.hex};
-          }
+          background: #1c1e22;
+          padding: 40px;
+          position: relative;
+        }
+        .TableItemWrapper:after {
+          content: '';
+          width: calc(100% - 80px);
+          bottom: 0;
+          left: 40px;
+          height: 1px;
+          background: #34383f;
+          position: absolute;
+        }
+        .TableItemWrapper:last-child:after {
+          display: none;
         }
       `}</style>
     </div>

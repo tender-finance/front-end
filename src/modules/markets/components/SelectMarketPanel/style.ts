@@ -30,6 +30,7 @@ const staticStyles = css.global`
     &__markets {
       display: flex;
       flex-wrap: wrap;
+      justify-content: flex-end;
       @include respond-to(sm) {
         display: none;
       }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useIntl } from 'react-intl';
 import { useThemeContext } from '@aave/aave-ui-kit';
-
 import { CompactNumber } from '../../../../components/basic/CompactNumber';
 
 import messages from './messages';
@@ -16,7 +15,7 @@ export default function TotalMarketsSize({ value }: TotalMarketsSizeProps) {
   const { currentTheme } = useThemeContext();
 
   return (
-    <div className="TotalMarketsSize">
+    <div className="TotalMarketsSize mob">
       <p>{intl.formatMessage(messages.title)}</p>
       <h2>
         ${' '}
@@ -31,12 +30,6 @@ export default function TotalMarketsSize({ value }: TotalMarketsSizeProps) {
       </h2>
 
       <style jsx={true}>{staticStyles}</style>
-      <style jsx={true}>{`
-        .TotalMarketsSize {
-          color: ${currentTheme.white.hex};
-          background: ${currentTheme.darkBlue.hex};
-        }
-      `}</style>
     </div>
   );
 }

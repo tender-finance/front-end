@@ -26,6 +26,7 @@ import StaticPoolDataProviderWrapper from './components/PoolDataProviderWrapper'
 import ErrorBoundary from './components/ErrorBoundary';
 
 import globalStyle from './globalStyle';
+import './style.css';
 import { WalletBalanceProvider } from './libs/wallet-balance-provider/WalletBalanceProvider';
 import { IPFS_MODE } from './helpers/config/misc-config';
 import {

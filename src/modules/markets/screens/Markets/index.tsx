@@ -18,7 +18,7 @@ import TotalMarketsSize from '../../components/TotalMarketsSize';
 import BorrowRatesHelpModal from '../../../../components/HelpModal/BorrowRatesHelpModal';
 import LabeledSwitcher from '../../../../components/basic/LabeledSwitcher';
 import MarketMobileCard from '../../components/MarketMobileCard';
-
+import './style.css';
 import messages from './messages';
 import staticStyles from './style';
 import { useIncentivesDataContext } from '../../../../libs/pool-data-provider/hooks/use-incentives-data-context';
@@ -105,7 +105,7 @@ export default function Markets() {
   return (
     <ScreenWrapper
       pageTitle={intl.formatMessage(messages.pageTitle)}
-      className="Markets"
+      // className="Markets"
       withMobileGrayBg={true}
     >
       <TopPanelWrapper isCollapse={true} withoutCollapseButton={true}>
@@ -116,25 +116,31 @@ export default function Markets() {
       </TopPanelWrapper>
 
       <div className="Markets__size">
-        <TotalMarketsSize value={totalLockedInUsd.toNumber()} />
+        <div className="container">
+          <TotalMarketsSize value={totalLockedInUsd.toNumber()} />
+        </div>
       </div>
 
       <div className="Markets__price-switcher">
-        <LabeledSwitcher
-          value={!isPriceInUSD}
-          leftOption="USD"
-          rightOption={intl.formatMessage(messages.native)}
-          onToggle={() =>
-            toggleLocalStorageClick(isPriceInUSD, setIsPriceInUSD, 'marketsIsPriceInUSD')
-          }
-        />
+        <div className="container">
+          <LabeledSwitcher
+            value={!isPriceInUSD}
+            leftOption="USD"
+            rightOption={intl.formatMessage(messages.native)}
+            onToggle={() =>
+              toggleLocalStorageClick(isPriceInUSD, setIsPriceInUSD, 'marketsIsPriceInUSD')
+            }
+          />
+        </div>
       </div>
 
       <div className="Markets__market-switcher">
-        <p className="Markets__marketSwitcher--title">
-          {intl.formatMessage(messages.selectMarket)}
-        </p>
-        <SelectMarketPanel />
+        <div className="container">
+          <p className="Markets__marketSwitcher--title">
+            {intl.formatMessage(messages.selectMarket)}
+          </p>
+          <SelectMarketPanel />
+        </div>
       </div>
 
       <MarketTable
@@ -164,16 +170,73 @@ export default function Markets() {
         ))}
       </div>
 
+      <section className="holders">
+        <div className="container">
+          <div className="holders__inner">
+            <div className="holders__info">
+              <h2 className="holders__title">
+                Stake Holders <img className="holders__item-lable" src="images/bg-holders-gr.png" />
+              </h2>
+              <p className="holders__text">
+                These stakeholders actively contribute as part of the community to the Aave Protocol
+                and its governance.
+              </p>
+            </div>
+            <div className="holders__items">
+              <div className="holders__item">
+                <img className="holders__item-img" src="images/holders/papafi.png" alt="papafi" />{' '}
+              </div>
+              <div className="holders__item">
+                <img
+                  className="holders__item-img"
+                  src="images/holders/three.png"
+                  alt="three-arrows-capital"
+                />
+              </div>
+              <div className="holders__item">
+                <img className="holders__item-img" src="images/holders/dtc.png" alt="dtc.capital" />{' '}
+              </div>
+              <div className="holders__item">
+                <img
+                  className="holders__item-img"
+                  src="images/holders/framework.png"
+                  alt="framework"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="subscribe">
+        <div className="container subscribe-con">
+          <div className="subscribe__info">
+            <img className="holders__item-img" src="/images/subs-bg.png" />
+            <h3 className="subscribe__title">Subscribe our newsletter</h3>
+            <p className="subscribe__text">
+              Join thousands of marketers and entrepreneurs for a 2-day event at the forefront of
+              social commerce.
+            </p>
+            <button className="subscribe-btn">
+              Subscribe <img className="def" src="images/ico/sub-ico.svg" alt="" />
+              <img className="hov" src="images/ico/sub-ico-bl.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </section>
+
       <style jsx={true} global={true}>
         {staticStyles}
       </style>
       <style jsx={true} global={true}>{`
         .Markets {
           &__top-content {
-            color: ${currentTheme.white.hex};
+            color: #fff;
+            background: #1c1e22;
+            box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.07);
+            border-radius: 15px;
           }
           &__marketSwitcher--title {
-            color: ${currentTheme.textDarkBlue.hex};
+            color: #fff;
           }
         }
       `}</style>

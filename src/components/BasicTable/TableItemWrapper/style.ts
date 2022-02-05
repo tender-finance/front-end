@@ -7,7 +7,7 @@ const staticStyles = css`
 
   .TableItemWrapper {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,6 +39,7 @@ const staticStyles = css`
       cursor: default;
       border: 1px solid transparent;
       box-shadow: none;
+
       &:hover,
       &:active {
         border: 1px solid transparent;

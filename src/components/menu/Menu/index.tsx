@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { useIntl } from 'react-intl';
 import classNames from 'classnames';
@@ -15,7 +15,7 @@ import AddressInfo from '../AddressInfo';
 import MobileContent from '../MobileContent';
 import { LOGO } from '../../../ui-config';
 
-import staticStyles from './style';
+import './style.css';
 
 import navigation from '../navigation';
 
@@ -32,6 +32,7 @@ export default function Menu({ title }: MenuProps) {
   const { currentTheme } = useThemeContext();
   const { currentAccount } = useUserWalletDataContext();
   const { currentMarketData } = useProtocolDataContext();
+  const [openMenu, setOpenMenu] = useState(false);
 
   const isActive = (url: string) => {
     return `/${url.split('/')[1]}` === `/${location.pathname.split('/')[1]}`;
@@ -40,75 +41,57 @@ export default function Menu({ title }: MenuProps) {
   const topLineColor = rgba(`${currentTheme.white.rgb}, 0.1`);
 
   return (
-    <header className="Menu">
-      <div className="Menu__logo-inner">
-        <Link className="Menu__logo-link" to="/markets" onClick={() => goToTop()}>
-          <img src={LOGO} alt="Aave" />
-        </Link>
-      </div>
+    <header className="header">
+      <div className="container d-f">
+        <div className="header__inner">
+          <Link className="header__logo" to="/markets" onClick={() => goToTop()}>
+            <img src="/images/logo.svg" alt="Aave" />
+          </Link>
+          <div className="header__menu-inner">
+            <div className="header__menu-links">
+              {navigation.map((link) => (
+                <MenuLink to={link.link} title={intl.formatMessage(link.title)} />
+              ))}
+            </div>
+            <button className="header__menu-btn">Enter App</button>
+          </div>
+        </div>
 
-      <div className="Menu__title-inner">
-        {history.length > 2 && (
-          <button className="Menu__back-button" onClick={history.goBack}>
-            <img src={backIcon} alt="" />
+        <div className={`header__mobile-menu `}>
+          <div className="header__mobile-menu-bg"></div>
+          <button className="header__mobile-menu-open" onClick={() => setOpenMenu(true)}>
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
-        )}
-
-        <p>{title}</p>
-      </div>
-
-      <div className="Menu__right-inner">
-        <nav className="Menu__navigation-inner">
-          <ul>
-            {navigation.map((link, index) => (
-              <li
-                className={classNames('Menu__link-inner', {
-                  Menu__linkHidden:
-                    (!currentAccount && link.hiddenWithoutWallet) ||
-                    (link.isVisible && !link.isVisible(currentMarketData)),
-                })}
-                key={index}
+          <div
+            className={`header__mobile-menu-inner ${
+              openMenu ? 'header__mobile-menu-inner-active ' : ''
+            }`}
+          >
+            <div className="header__mobile-menu-top">
+              <button
+                className="header__mobile-menu-close"
+                onClick={() => setOpenMenu(false)}
+                type="button"
               >
-                <MenuLink
-                  to={link.link}
-                  title={intl.formatMessage(link.title)}
-                  isActive={isActive(link.link)}
-                />
-              </li>
-            ))}
-            <li className="Menu__link-inner">
-              <MoreButton />
-            </li>
-          </ul>
-        </nav>
-
-        <div className="Menu__burger-inner">
-          <MobileContent isActive={isActive} currentAccount={currentAccount} />
-        </div>
-
-        <div className="Menu__buttons-inner">
-          <MarketSwitcher />
-          <AddressInfo />
+                {' '}
+              </button>
+            </div>
+            <div className="header__mobile-menu-links">
+              <ul className="header__mobile-menu-links-inner">
+                {navigation.map((link) => (
+                  <li>
+                    {' '}
+                    <MenuLink to={link.link} title={intl.formatMessage(link.title)} />
+                  </li>
+                ))}
+              </ul>
+              <button className="header__menu-btn">Enter Ap</button>
+            </div>
+          </div>
         </div>
       </div>
-
-      <style jsx={true} global={true}>
-        {staticStyles}
-      </style>
-      <style jsx={true} global={true}>{`
-        .Menu {
-          background: ${currentTheme.headerBg.hex};
-          &:after {
-            background: ${topLineColor};
-          }
-
-          &__title-inner {
-            p {
-              color: ${currentTheme.white.hex};
-            }
-          }
-        }
-      `}</style>
     </header>
   );
 }

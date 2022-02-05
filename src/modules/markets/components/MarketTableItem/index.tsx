@@ -10,6 +10,7 @@ import LiquidityMiningCard from '../../../../components/liquidityMining/Liquidit
 import { getAssetInfo, TokenIcon } from '../../../../helpers/config/assets-config';
 
 import staticStyles from './style';
+import Link from '../../../../components/basic/Link';
 
 export interface MarketTableItemProps {
   id: string;
@@ -139,6 +140,16 @@ export default function MarketTableItem({
             ) : (
               <NoData color="dark" />
             )}
+          </TableColumn>
+          <TableColumn className="MarketTableItem__column">
+            <Link className="linkDeposit" to="">
+              Deposit
+            </Link>
+          </TableColumn>
+          <TableColumn className="MarketTableItem__column">
+            <Link className="linkBorrow" to="">
+              Borrow
+            </Link>
           </TableColumn>
         </>
       )}

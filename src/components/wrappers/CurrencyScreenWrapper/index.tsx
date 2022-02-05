@@ -58,7 +58,7 @@ export default function CurrencyScreenWrapper({
   return (
     <ScreenWrapper
       pageTitle={intl.formatMessage(type === 'deposit' ? messages.deposit : messages.borrow)}
-      className="CurrencyScreenWrapper"
+      className="CurrencyScreenWrapper container"
     >
       {!sm && (
         <div className="CurrencyScreenWrapper__top-info">

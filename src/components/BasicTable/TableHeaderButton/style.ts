@@ -5,6 +5,20 @@ const staticStyles = css`
   @import 'src/_mixins/vars';
   @import 'src/_mixins/screen-size';
 
+  .TableHeaderButton.TableHeaderButton__sort {
+    color: red;
+
+    p {
+      color: #fff !important;
+    }
+    span {
+      color: #fff !important;
+    }
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
   .TableHeaderButton {
     font-size: $regular;
     font-weight: 400;
@@ -16,6 +30,22 @@ const staticStyles = css`
     justify-content: center;
     text-align: center;
     transition: none;
+    position: relative;
+
+    p {
+      color: #76899b !important;
+    }
+    span {
+      color: #76899b !important;
+    }
+
+    svg {
+      margin-left: 5px;
+      position: absolute;
+      right: -10px;
+      bottom: 3px;
+    }
+
     @include respond-to(xl) {
       font-size: $medium;
     }
@@ -42,26 +72,6 @@ const staticStyles = css`
       p {
         display: inline;
         position: relative;
-        &:after {
-          content: '';
-          position: absolute;
-          right: -15px;
-          top: 56%;
-          transform: translateY(-50%);
-          width: 0;
-          height: 0;
-          border-style: solid;
-          border-width: 8px 5px 0 5px;
-          border-color: transparent;
-          transition: $transition;
-          @include respond-to(md) {
-            right: -12px;
-          }
-          @include respond-to(sm) {
-            border-width: 5px 3px 0 3px;
-            right: -8px;
-          }
-        }
       }
     }
 

@@ -14,6 +14,7 @@ const staticStyles = css.global`
     margin: 0 auto;
     position: relative;
     z-index: 2;
+
     @include respond-to(xl) {
       padding: 0 40px;
     }

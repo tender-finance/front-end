@@ -1,0 +1,261 @@
+@media only screen and (max-width: 1200px) {
+  .holders {
+    padding-top: 205px;
+    padding-bottom: 155px;
+  }
+
+  .holders__inner {
+    flex-direction: column;
+  }
+
+  .holders__info {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .holders__items {
+    width: auto;
+    justify-content: center;
+  }
+
+  .holders__item:nth-child(odd) {
+    width: 313px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .holders__item:nth-child(even) {
+    width: 313px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .top__content {
+    top: -67px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .holders__title::after {
+    top: -194px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .top__content-star-t {
+    position: absolute;
+    top: 400px;
+    z-index: 2;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    pointer-events: none;
+    width: 100%;
+  }
+
+  .top__content::after {
+    top: 433px;
+    transform: translate(52%, -7px);
+  }
+
+  .top__content {
+    padding-top: 300px;
+    padding-bottom: 600px;
+  }
+
+  .top__content-title {
+    text-align: center;
+  }
+
+  .top__content-text {
+    text-align: center;
+  }
+
+  .top__content-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top__content-star-l {
+    position: absolute;
+    top: 260px;
+    left: 25px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .top__content-star-r {
+    position: absolute;
+    top: 154px;
+    right: 95px;
+    transform: translate(83%, 34px);
+    z-index: 2;
+    pointer-events: none;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .header {
+    padding: 10px 0;
+  }
+
+  .TotalMarketsSize.mob {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-bottom: 30px;
+  }
+
+  .TotalMarketsSize.mob p {
+    font-size: 30px !important;
+  }
+
+  .TotalMarketsSize.mob h2 {
+    font-size: 35px !important;
+  }
+
+  .holders__item:nth-child(even) {
+    margin-left: 0px;
+  }
+
+  .holders__title {
+    line-height: 76px;
+    font-size: 89px;
+  }
+
+  .holders__text {
+    font-size: 16px;
+  }
+
+  .footer {
+    padding: 36px 0 73px;
+  }
+
+  .footer__column-get {
+    width: 128px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .top__content::after {
+    top: 526px;
+    transform: translate(52%, -7px);
+  }
+
+  .subscribe__title {
+    line-height: 35px;
+    margin-bottom: 20px;
+    font-size: 43px;
+  }
+
+  .subscribe__text {
+    line-height: 26px;
+    margin-bottom: 28px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 608px) {
+  .footer__info {
+    gap: 43px;
+    justify-content: space-around;
+  }
+
+  .footer__column-get {
+    width: 100%;
+  }
+
+  .footer__column-get ul {
+    text-align: center;
+  }
+
+  .footer__get,
+  .footer__text {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .top__content::after {
+    top: 364px;
+    transform: translate(52%, -7px);
+  }
+
+  .top__content-title {
+    line-height: 70px;
+    font-size: 75px;
+  }
+
+  .top__content-text {
+    line-height: 130%;
+    font-size: 14px;
+  }
+
+  .subscribe__info {
+    padding-top: 50px;
+  }
+
+  .top__content-star-l,
+  .top__content-star-r {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .top__content::after {
+    top: 427px;
+    transform: translate(52%, -7px);
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .top__content {
+    padding-bottom: 500px;
+  }
+
+  .top__content-star-t {
+    top: 500px;
+    width: 130%;
+  }
+
+  .top__content::after {
+    top: 460px;
+    transform: translate(52%, -7px);
+  }
+
+  .top__content-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .top__content-num + .top__content-num {
+    margin: 0;
+  }
+
+  .holders__title {
+    line-height: 66px;
+    font-size: 76px;
+    margin-bottom: 33px;
+  }
+
+  .footer__column-get {
+    width: 128px;
+  }
+
+  .footer__column-get ul {
+    text-align: center;
+  }
+
+  .footer__get,
+  .footer__text {
+    text-align: start;
+  }
+}

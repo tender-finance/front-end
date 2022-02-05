@@ -144,7 +144,7 @@ export default function MarketMobileCard({
       <style jsx={true} global={true}>{`
         .MarketMobileCard {
           &__card--title {
-            color: ${currentTheme.textDarkBlue.hex};
+            color: #aec0cf !important;
             span {
               color: ${currentTheme.lightBlue.hex};
             }

@@ -13,6 +13,13 @@ const staticStyles = css.global`
   @include font-face('roboto-font', '${PUBLIC_URL}/fonts/RobotoMedium/RobotoMedium', 500);
   @include font-face('roboto-font', '${PUBLIC_URL}/fonts/RobotoBold/RobotoBold', 600);
 
+  @include font-face('Neue-Machina', '${PUBLIC_URL}/fonts/NeueMachina-Light', 300);
+  @include font-face('Neue-Machina', '${PUBLIC_URL}/fonts/NeueMachina-Regular', 400);
+  @include font-face('Neue-Machina', '${PUBLIC_URL}/fonts/NeueMachina-Medium', 500);
+
+  @include font-face('Poppins', '${PUBLIC_URL}/fonts/Poppins-Regular', 400);
+  @include font-face('Poppins', '${PUBLIC_URL}/fonts/Poppins-Bold', 700);
+
   * {
     padding: 0;
     margin: 0;
@@ -27,7 +34,6 @@ const staticStyles = css.global`
     -webkit-text-size-adjust: none;
     position: relative;
     height: 100%;
-    overflow: hidden !important;
   }
 
   body {
@@ -148,7 +154,6 @@ const staticStyles = css.global`
     display: flex;
     flex-direction: column;
     flex: 1;
-    overflow: hidden;
   }
 
   ul {

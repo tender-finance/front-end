@@ -81,6 +81,7 @@ export default function LiquidityMiningAPYLine({
       </style>
       <style jsx={true} global={true}>{`
         .LiquidityMiningAPYLine {
+          background: #34383f;
           color: ${currentTheme.lightBlue.hex};
           border: 1px solid ${borderColor};
 

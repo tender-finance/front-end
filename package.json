@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "license": "BSD-3-Clause",
+  "homepage": "http://94.130.229.184/aave/",
   "dependencies": {
     "@0x/subproviders": "^6.5.4",
     "@aave/aave-ui-kit": "^0.1.14",

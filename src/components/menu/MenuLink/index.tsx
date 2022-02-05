@@ -10,7 +10,7 @@ import staticStyles from './style';
 interface MenuLinkProps {
   to: string;
   title: string;
-  isActive: boolean;
+  isActive?: boolean;
   hidden?: boolean;
 }
 
@@ -34,13 +34,7 @@ export default function MenuLink({ to, title, isActive, hidden }: MenuLinkProps)
       })}
       onClick={() => goToTop()}
     >
-      <div className="MenuLink__title">
-        <p>
-          <b>{title}</b> <strong>{title}</strong>
-        </p>{' '}
-        <i />
-      </div>
-
+      <strong>{title}</strong>
       <style jsx={true} global={true}>
         {staticStyles}
       </style>

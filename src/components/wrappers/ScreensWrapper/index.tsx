@@ -58,7 +58,7 @@ export default function ScreensWrapper({ children }: ScreensWrapperProps) {
       <Menu title={title} />
 
       <main className="ScreensWrapper__content" id="ScreensWrapper__content-wrapper">
-        <div className="ScreensWrapper__top-contentWrapper" />
+        {/* <div className="ScreensWrapper__top-contentWrapper" /> */}
 
         <TitleContext.Provider value={{ title, setTitle }}>
           <TopPanelSmallContext.Provider value={{ isTopPanelSmall, setTopPanelSmall }}>
@@ -82,7 +82,8 @@ export default function ScreensWrapper({ children }: ScreensWrapperProps) {
         @import 'src/_mixins/screen-size';
 
         .ScreensWrapper {
-          background: ${currentTheme.mainBg.hex};
+          background-color: #080808;
+          color: #fff;
 
           &__top-contentWrapper {
             background: ${currentTheme.headerBg.hex};

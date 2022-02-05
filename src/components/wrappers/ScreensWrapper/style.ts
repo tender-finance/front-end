@@ -16,9 +16,6 @@ const staticStyles = css.global`
       display: flex;
       flex-direction: column;
       flex: 1;
-      overflow: auto;
-      overflow-x: hidden;
-      position: relative;
       z-index: 2;
     }
 

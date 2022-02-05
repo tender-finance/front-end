@@ -180,6 +180,7 @@ export default function Value({
           }
 
           .Value__tooltip {
+            color: #aec0cf !important;
             background: ${currentTheme.darkBlue.hex};
             &:after {
               border-top-color: ${currentTheme.darkBlue.hex} !important;

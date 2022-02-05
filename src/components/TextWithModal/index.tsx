@@ -115,9 +115,7 @@ export default function TextWithModal({
         .TextWithModal {
           &__dark {
             .TextWithModal__text {
-              color: ${onWhiteBackground
-                ? currentTheme.darkBlue.hex
-                : currentTheme.textDarkBlue.hex};
+              color: #fff;
             }
           }
           &__white {
