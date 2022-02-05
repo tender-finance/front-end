@@ -41,7 +41,7 @@ const staticStyles = css.global`
       overflow-y: auto;
       flex: auto;
       height: auto;
-      min-height: 704px;
+      min-height: 542px;
       border-radius: 15px;
       overflow: hidden;
       @include respond-to(sm) {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
 import { valueToBigNumber } from '@aave/protocol-js';
 import { useThemeContext } from '@aave/aave-ui-kit';
@@ -22,6 +22,7 @@ import './style.css';
 import messages from './messages';
 import staticStyles from './style';
 import { useIncentivesDataContext } from '../../../../libs/pool-data-provider/hooks/use-incentives-data-context';
+import ReactPaginate from 'react-paginate';
 
 export default function Markets() {
   const intl = useIntl();
@@ -35,6 +36,11 @@ export default function Markets() {
   );
   const [sortName, setSortName] = useState('');
   const [sortDesc, setSortDesc] = useState(false);
+
+  const [currentItems, setCurrentItems] = useState<any>([]);
+  const [pageCount, setPageCount] = useState(0);
+  const [itemOffset, setItemOffset] = useState(0);
+
   let totalLockedInUsd = valueToBigNumber('0');
   let sortedData = reserves
     .filter((res) => res.isActive)
@@ -102,6 +108,18 @@ export default function Markets() {
     }
   }
 
+  useEffect(() => {
+    // Fetch items from another resources.
+    const endOffset = itemOffset + 5;
+    setCurrentItems(sortedData.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(sortedData.length / 5));
+  }, [itemOffset]);
+
+  const handlePageClick = (event: any) => {
+    const newOffset = (event.selected * 5) % sortedData.length;
+    setItemOffset(newOffset);
+  };
+
   return (
     <ScreenWrapper
       pageTitle={intl.formatMessage(messages.pageTitle)}
@@ -149,10 +167,24 @@ export default function Markets() {
         sortDesc={sortDesc}
         setSortDesc={setSortDesc}
       >
-        {sortedData.map((item, index) => (
-          <MarketTableItem {...item} isPriceInUSD={isPriceInUSD} key={index} />
-        ))}
+        {currentItems?.length
+          ? currentItems.map((item: any, index: any) => (
+              <MarketTableItem {...item} isPriceInUSD={isPriceInUSD} key={index} />
+            ))
+          : null}
       </MarketTable>
+      {reserves?.length > 5 ? (
+        <div className="pagination-wrap desc">
+          <ReactPaginate
+            previousLabel="<"
+            breakLabel="..."
+            nextLabel=">"
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={5}
+            pageCount={pageCount}
+          />
+        </div>
+      ) : null}
 
       <div className="Markets__mobile--cards">
         {currentMarketData.enabledFeatures?.incentives && (
@@ -165,9 +197,21 @@ export default function Markets() {
           </div>
         )}
 
-        {sortedData.map((item, index) => (
-          <MarketMobileCard {...item} key={index} />
-        ))}
+        {currentItems?.length
+          ? currentItems.map((item: any, index: any) => <MarketMobileCard {...item} key={index} />)
+          : null}
+        {reserves?.length > 5 ? (
+          <div className="pagination-wrap mobile">
+            <ReactPaginate
+              previousLabel="<"
+              breakLabel="..."
+              nextLabel=">"
+              onPageChange={handlePageClick}
+              pageRangeDisplayed={5}
+              pageCount={pageCount}
+            />
+          </div>
+        ) : null}
       </div>
 
       <section className="holders">

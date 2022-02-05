@@ -153,3 +153,66 @@
 .subscribe-btn img {
   margin-left: 7px;
 }
+
+.pagination-wrap {
+  display: flex;
+  margin: 30px auto;
+}
+
+.pagination-wrap ul {
+  display: flex;
+  align-items: center;
+}
+
+.pagination-wrap li {
+  border: 1px solid #c7d0d8;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  margin: 0 7px;
+}
+
+.pagination-wrap li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-wrap li:hover {
+  background: #54ce90;
+}
+
+.pagination-wrap li.selected {
+  background: #54ce90;
+}
+
+.pagination-wrap li.disabled {
+  cursor: none;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.pagination-wrap.mobile {
+  display: none;
+}
+
+.pagination-wrap.desc {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .pagination-wrap.mobile {
+    display: block;
+  }
+
+  .pagination-wrap.desc {
+    display: none;
+  }
+}
