@@ -26,7 +26,7 @@ export default function BlockWrapper({ title, titleComponent, children }: BlockW
       </style>
       <style jsx={true}>{`
         .BlockWrapper {
-          color: ${currentTheme.textDarkBlue.hex};
+          color: #fff;
         }
       `}</style>
     </div>

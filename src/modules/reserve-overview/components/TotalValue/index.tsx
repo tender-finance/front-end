@@ -51,7 +51,7 @@ export default function TotalValue({
       </style>
       <style jsx={true} global={true}>{`
         .TotalValue {
-          color: ${currentTheme.textDarkBlue.hex};
+          color: #fff;
 
           .Value .Value__value {
             &:after {
@@ -60,7 +60,7 @@ export default function TotalValue({
           }
 
           .Value .SubValue {
-            color: ${currentTheme.textDarkBlue.hex};
+            color: #fff;
           }
 
           &__green {

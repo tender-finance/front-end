@@ -10,6 +10,7 @@ const staticStyles = css.global`
     flex-direction: column;
     position: relative;
     border-radius: $borderRadius;
+
     @include respond-to(sm) {
       margin-right: 15px;
       &:last-of-type {
@@ -57,6 +58,7 @@ const staticStyles = css.global`
     }
 
     &__inner {
+      background: #080808 !important;
       position: relative;
       z-index: 2;
       padding: 30px 10px 20px;

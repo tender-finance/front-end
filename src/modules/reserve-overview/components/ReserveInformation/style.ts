@@ -4,7 +4,9 @@ import css from 'styled-jsx/css';
 const staticStyles = css.global`
   @import 'src/_mixins/vars';
   @import 'src/_mixins/screen-size';
-
+  .ReserveInformation__top-info {
+    color: #fff;
+  }
   .ReserveInformation {
     flex: 1;
     display: flex;
@@ -45,6 +47,9 @@ const staticStyles = css.global`
       flex-direction: column;
       flex: 1;
     }
+    & a {
+      color: #fff;
+    }
 
     &__content {
       padding: 20px;
@@ -64,6 +69,7 @@ const staticStyles = css.global`
     }
 
     &__top-info {
+      color: #fff;
       display: none;
       @include respond-to(lg) {
         display: block;

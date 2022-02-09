@@ -272,13 +272,20 @@ export default function ReserveInformation({
       </style>
       <style jsx={true}>{`
         .ReserveInformation {
+          color: #fff !important;
           &__title {
-            color: ${currentTheme.textDarkBlue.hex};
+            color: #fff !important;
           }
 
           &__line {
-            color: ${currentTheme.textDarkBlue.hex};
-            border: 1px solid ${currentTheme.textDarkBlue.hex};
+            color: #fff;
+            border: 1px solid #fff;
+          }
+          & p {
+            color: #fff !important;
+          }
+          & span {
+            color: #fff !important;
           }
         }
       `}</style>

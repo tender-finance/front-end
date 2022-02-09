@@ -11,6 +11,10 @@ const staticStyles = css`
     border-style: solid;
     width: 260px;
     margin: 0 15px;
+    color: #fff;
+    & .Row__title {
+      color: #fff !important;
+    }
     @include respond-to(xl) {
       width: 200px;
     }
@@ -42,6 +46,7 @@ const staticStyles = css`
     }
 
     &__content {
+      color: #fff;
       padding: 10px;
       @include respond-to(lg) {
         padding: 5px;

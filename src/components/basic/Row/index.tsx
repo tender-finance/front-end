@@ -50,7 +50,7 @@ export default function Row({
       <style jsx={true}>{`
         .Row {
           &__dark {
-            color: ${onWhiteBackground ? currentTheme.darkBlue.hex : currentTheme.textDarkBlue.hex};
+            color: #fff;
           }
           &__lightBlue {
             color: ${currentTheme.lightBlue.hex};

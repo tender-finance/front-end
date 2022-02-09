@@ -315,25 +315,33 @@ export default function UserInformation({
           @import 'src/_mixins/screen-size';
 
           @include respond-to(sm) {
-            background: ${currentTheme.darkBlue.hex};
+            background: rgb(56, 61, 81);
           }
-
+          & div {
+            color: #fff !important;
+          }
+          & p {
+            color: #fff !important;
+          }
+          & span {
+            color: #fff !important;
+          }
           &__mobile-caption {
             h2 {
-              color: ${currentTheme.white.hex};
+              color: #fff !important;
             }
           }
 
           &__info-wrapper {
-            background: ${currentTheme.whiteElement.hex};
+            background: rgb(56, 61, 81);
             &:after {
               background: ${currentTheme.white.hex};
             }
 
             h3 {
-              color: ${currentTheme.textDarkBlue.hex};
+              color: #fff !important;
               @include respond-to(sm) {
-                color: ${currentTheme.white.hex};
+                color: #fff !important;
               }
             }
           }

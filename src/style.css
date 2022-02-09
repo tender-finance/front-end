@@ -1,3 +1,6 @@
+.TokenIcon__dollar {
+  color: #fff;
+}
 @media only screen and (max-width: 1200px) {
   .holders {
     padding-top: 205px;

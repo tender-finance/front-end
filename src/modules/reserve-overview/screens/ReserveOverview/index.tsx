@@ -167,7 +167,7 @@ function ReserveOverview({
         .ReserveOverview {
           &__information-title,
           &__poolLink-inner {
-            color: ${currentTheme.textDarkBlue.hex};
+            color: #fff;
           }
           &__noUser {
             background: ${currentTheme.whiteElement.hex} !important;

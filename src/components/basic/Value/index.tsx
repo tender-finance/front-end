@@ -155,7 +155,7 @@ export default function Value({
         .Value {
           &__dark {
             .Value__value {
-              color: ${currentTheme.textDarkBlue.hex};
+              color: #fff;
             }
           }
           &__white {
@@ -164,7 +164,7 @@ export default function Value({
             }
             .Value__token-icon {
               .TokenIcon__dollar {
-                color: ${currentTheme.white.hex};
+                color: #fff;
               }
             }
           }
@@ -174,7 +174,7 @@ export default function Value({
             }
             .Value__token-icon {
               .TokenIcon__dollar {
-                color: ${currentTheme.primary.hex};
+                color: #fff;
               }
             }
           }

@@ -57,41 +57,39 @@ export default function ValuePercent({
       <style jsx={true}>{`
         .ValuePercent__dark {
           .ValuePercent__value {
-            color: ${onWhiteBackground ? currentTheme.darkBlue.hex : currentTheme.textDarkBlue.hex};
+            color: #fff;
           }
         }
         .ValuePercent__primary {
           .ValuePercent__value {
-            color: ${currentTheme.primary.hex};
+            color: #fff;
           }
         }
         .ValuePercent__secondary {
           .ValuePercent__value {
-            color: ${currentTheme.secondary.hex};
+            color: #fff;
           }
         }
         .ValuePercent__green {
           .ValuePercent__value {
-            color: ${currentTheme.green.hex};
+            color: #fff;
           }
         }
         .ValuePercent__red {
           .ValuePercent__value {
-            color: ${currentTheme.red.hex};
+            color: #fff;
           }
         }
         .ValuePercent {
           .ValuePercent__value {
             span {
-              color: ${onWhiteBackground
-                ? currentTheme.darkBlue.hex
-                : currentTheme.textDarkBlue.hex};
+              color: #fff;
             }
           }
         }
         .ValuePercent__darkOrange {
           .ValuePercent__value {
-            color: ${currentTheme.darkOrange.hex};
+            color: #fff;
           }
         }
         .ValuePercent__white {
