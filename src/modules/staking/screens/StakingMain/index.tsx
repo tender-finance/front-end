@@ -95,15 +95,15 @@ export default function StakingMain() {
 
         .StakingMain {
           &__description {
-            color: ${currentTheme.textDarkBlue.hex};
+            color: #fff;
           }
 
           &__buttons {
             .StakingMain__button {
-              color: ${currentTheme.darkBlue.hex};
+              color: #fff;
 
               .StakingMain__button-inner {
-                background: ${currentTheme.white.hex};
+                background: #383d51;
               }
               &:after {
                 background: ${gradientOnHover};

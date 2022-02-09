@@ -38,19 +38,13 @@ export default function ConnectButton({ className, size = 'normal' }: ConnectBut
         .ConnectButton {
           &:hover {
             .ConnectButton__inner {
-              border-color: ${currentTheme.white.hex};
+              border-color: #53d894;
             }
           }
 
           &:before,
           &:after {
-            background: linear-gradient(
-              to right,
-              ${currentTheme.secondary.hex},
-              ${currentTheme.primary.hex},
-              ${currentTheme.secondary.hex},
-              ${currentTheme.primary.hex}
-            );
+            background: #53d894;
           }
 
           &__inner {
@@ -63,7 +57,7 @@ export default function ConnectButton({ className, size = 'normal' }: ConnectBut
         .ConnectButton__medium {
           &:hover {
             .ConnectButton__inner {
-              border-color: ${currentTheme.white.hex};
+              border-color: #53d894;
             }
           }
 

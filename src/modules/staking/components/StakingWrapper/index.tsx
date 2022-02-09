@@ -339,7 +339,7 @@ export default function StakingWrapper({ children }: StakingWrapperProps) {
         .StakingWrapper {
           &__content-left,
           &__content-right {
-            background: ${currentTheme.whiteElement.hex};
+            background: #383d51;
           }
 
           &__info-timerWrapper {

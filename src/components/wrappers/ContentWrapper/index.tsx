@@ -48,11 +48,11 @@ export default function ContentWrapper({
       <style jsx={true}>{`
         .ContentWrapper {
           color: ${currentTheme.darkBlue.hex};
-          background: ${currentTheme.whiteElement.hex};
+          background: #080808;
 
           &__back-button {
-            color: ${currentTheme.textDarkBlue.hex};
-            border: 1px solid ${currentTheme.textDarkBlue.hex};
+            color: #fff;
+            border: 1px solid #fff;
             &:hover {
               background: ${currentTheme.textDarkBlue.hex};
               color: ${currentTheme.whiteElement.hex};
@@ -65,9 +65,9 @@ export default function ContentWrapper({
               }
             }
             span {
-              border: 1px solid ${currentTheme.textDarkBlue.hex};
+              border: 1px solid #fff;
               &:after {
-                border: solid ${currentTheme.textDarkBlue.hex};
+                border: solid #fff;
                 border-width: 0 1px 1px 0;
               }
             }

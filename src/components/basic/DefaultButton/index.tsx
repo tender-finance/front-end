@@ -71,8 +71,8 @@ export default function DefaultButton({
           color: ${currentTheme.white.hex};
 
           &__primary {
-            background: ${currentTheme.primary.hex};
-            border-color: ${currentTheme.primary.hex};
+            background: #53d894;
+            border-color: #53d894;
           }
           &__secondary {
             background: ${currentTheme.secondary.hex};

@@ -8,6 +8,9 @@ const staticStyles = css.global`
   .AssetsFilterPanel {
     margin-bottom: 30px;
     display: flex;
+    & input {
+      color: #fff;
+    }
     @include respond-to(xl) {
       margin-bottom: 20px;
     }

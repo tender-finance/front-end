@@ -83,7 +83,11 @@ export default function Menu({ title }: MenuProps) {
                 {navigation.map((link) => (
                   <li>
                     {' '}
-                    <MenuLink to={link.link} title={intl.formatMessage(link.title)} />
+                    <MenuLink
+                      onClick={() => setOpenMenu(false)}
+                      to={link.link}
+                      title={intl.formatMessage(link.title)}
+                    />
                   </li>
                 ))}
               </ul>

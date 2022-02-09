@@ -24,6 +24,7 @@ const staticStyles = css.global`
     }
 
     &__description {
+      color: #fff;
       font-size: $large;
       @include respond-to(xl) {
         font-size: $medium;
@@ -52,6 +53,7 @@ const staticStyles = css.global`
         &:hover {
           &:after {
             opacity: 1;
+            background: #53d894;
           }
         }
         &:active {
@@ -75,6 +77,7 @@ const staticStyles = css.global`
           filter: blur(3px);
           opacity: 0;
           transition: all 0.3s ease;
+          background: #53d894;
         }
 
         img {

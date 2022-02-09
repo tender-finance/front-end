@@ -31,15 +31,16 @@ const staticStyles = css.global`
       }
 
       .ContentWrapperWithTopLine__content {
-        padding: 30px;
+        background: #080808 !important ;
+        padding: 30px 0;
         @include respond-to(xl) {
-          padding: 20px;
+          padding: 20px 0;
         }
         @include respond-to(lg) {
-          padding: 20px 15px;
+          padding: 20px 0;
         }
         @include respond-to(md) {
-          padding: 20px 10px;
+          padding: 20px 0;
         }
       }
     }
@@ -100,6 +101,7 @@ const staticStyles = css.global`
         order: 2;
       }
       .MarketSwitcher__text-button {
+        color: #54ce90 !important;
         font-size: $large;
         margin-left: 5px;
         @include respond-to(xl) {

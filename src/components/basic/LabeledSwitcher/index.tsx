@@ -111,6 +111,7 @@ export default function LabeledSwitcher({
           }
 
           .LabeledSwitch__pointer {
+            transform: none;
             padding: 0;
             span {
               background: #54ce90;

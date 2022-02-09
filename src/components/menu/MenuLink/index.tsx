@@ -12,9 +12,10 @@ interface MenuLinkProps {
   title: string;
   isActive?: boolean;
   hidden?: boolean;
+  onClick?: () => void;
 }
 
-export default function MenuLink({ to, title, isActive, hidden }: MenuLinkProps) {
+export default function MenuLink({ to, title, isActive, hidden, onClick }: MenuLinkProps) {
   const { currentTheme } = useThemeContext();
 
   const activeGradient = gradient(
@@ -32,7 +33,10 @@ export default function MenuLink({ to, title, isActive, hidden }: MenuLinkProps)
         MenuLink__active: isActive,
         MenuLink__hidden: hidden,
       })}
-      onClick={() => goToTop()}
+      onClick={() => {
+        goToTop();
+        onClick && onClick();
+      }}
     >
       <strong>{title}</strong>
       <style jsx={true} global={true}>

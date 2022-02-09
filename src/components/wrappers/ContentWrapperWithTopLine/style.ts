@@ -31,7 +31,7 @@ const staticStyles = css`
       min-height: 49px;
       @include respond-to(xl) {
         padding: 10px 15px;
-        font-size: $small;
+        font-size: 14px;
         min-height: 34px;
       }
       @include respond-to(lg) {

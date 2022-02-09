@@ -26,9 +26,9 @@ export default function InfoPanel({ children }: InfoPanelProps) {
       <style jsx={true}>{staticStyles}</style>
       <style jsx={true}>{`
         .InfoPanel {
-          color: ${currentTheme.textDarkBlue.hex};
-          background: ${currentTheme.whiteItem.hex};
-          border: 1px solid ${currentTheme.secondary.hex};
+          color: #fff;
+          background: #383d51;
+          border: 1px solid #383d51;
         }
       `}</style>
     </div>

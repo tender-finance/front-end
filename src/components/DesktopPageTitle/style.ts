@@ -8,6 +8,8 @@ const staticStyles = css.global`
   .DesktopPageTitle {
     position: relative;
     margin-bottom: 37px;
+    border-bottom: 2px solid #53d894;
+
     @include respond-to(xl) {
       margin-bottom: 30px;
     }
@@ -20,6 +22,7 @@ const staticStyles = css.global`
     @include respond-to(sm) {
       display: none;
     }
+
     h2 {
       font-weight: 400;
       line-height: 1;

@@ -39,6 +39,13 @@ const staticStyles = css.global`
       }
 
       .SidePanelCard__inner {
+        background: #080808;
+        color: #fff;
+
+        & p {
+          color: #fff !important;
+        }
+
         padding: 15px 10px;
         @include respond-to(lg) {
           padding: 8px 10px;
@@ -99,6 +106,7 @@ const staticStyles = css.global`
       align-items: center;
       flex: 1;
       margin-bottom: 10px;
+      color: #fff;
     }
     &__title {
       margin-bottom: 1px;

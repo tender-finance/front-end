@@ -21,7 +21,7 @@ const staticStyles = css`
       top: -2px;
       position: absolute;
       height: 2px;
-      background: inherit;
+      background: #fff !important ;
       transform: rotate(-45deg) translateY(-10%);
       width: 18px;
       transform-origin: right top;

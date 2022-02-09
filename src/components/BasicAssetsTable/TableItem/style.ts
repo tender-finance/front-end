@@ -20,6 +20,16 @@ const staticStyles = css.global`
     }
 
     .TableItem__token-inner {
+      & p {
+        color: #aec0cf !important;
+      }
+      & p span {
+        color: #aec0cf !important;
+      }
+      & .ValuePercent p {
+        color: #aec0cf !important;
+      }
+
       align-items: flex-start;
       max-width: 240px;
       @include respond-to(lg) {
@@ -87,6 +97,15 @@ const staticStyles = css.global`
       justify-content: center;
       .Value {
         align-items: center;
+      }
+      p {
+        color: #aec0cf !important;
+      }
+      p span {
+        color: #aec0cf !important;
+      }
+      span {
+        color: #aec0cf !important;
       }
     }
 

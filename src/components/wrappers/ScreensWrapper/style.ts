@@ -17,6 +17,7 @@ const staticStyles = css.global`
       flex-direction: column;
       flex: 1;
       z-index: 2;
+      padding-top: 100px;
     }
 
     &__top-contentWrapper {

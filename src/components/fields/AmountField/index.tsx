@@ -144,7 +144,7 @@ export default function AmountField({
                 : currentTheme.textDarkBlue.hex};
           }
           &__maxButton {
-            color: ${currentTheme.primary.hex};
+            color: #54ce90;
           }
 
           &__error-text {

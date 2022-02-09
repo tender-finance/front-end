@@ -50,6 +50,7 @@ const staticStyles = css.global`
 
     .AmountField__input {
       input {
+        color: #fff;
         padding: 15px 5px 14px 0;
         @include respond-to(lg) {
           padding: 12px 5px 12px 0;

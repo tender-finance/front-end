@@ -85,9 +85,12 @@ export default function PaymentsPanel({ currencySymbol, withoutOrTitle }: Paymen
       </style>
       <style jsx={true} global={true}>{`
         .PaymentsPanel {
-          background: ${currentTheme.whiteItem.hex};
-          border: 1px solid ${currentTheme.secondary.hex};
-          color: ${currentTheme.textDarkBlue.hex};
+          background: #1c1e22;
+          border: 1px solid #1c1e22;
+          color: #fff;
+          & a {
+            color: #53d894;
+          }
 
           &__button {
             background: ${currentTheme.white.hex};

@@ -140,7 +140,6 @@ export default function DepositsMain() {
             searchOnChange={setSearchValue}
           />
         )}
-
         <DepositBorrowMainWrapper
           contentTitle={intl.formatMessage(messages.availableToDeposit)}
           itemsTitle={intl.formatMessage(messages.myDeposits)}

@@ -13,6 +13,7 @@ const staticStyles = css.global`
     position: relative;
 
     &__text {
+      color: #53d894 !important;
       font-size: $large;
       @include respond-to(xl) {
         font-size: $medium;
@@ -69,6 +70,7 @@ const staticStyles = css.global`
   .TextWithModal__modal {
     padding: 32px 48px !important;
     max-width: 506px !important ;
+    background: #383d51 !important;
     @include respond-to(sm) {
       padding: 24px !important;
     }

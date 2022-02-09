@@ -42,19 +42,19 @@ export default function Caption({
         .Caption {
           &__market {
             h2 {
-              color: ${currentTheme.primary.hex};
+              color: #53d894;
             }
           }
 
           &__primary {
             h2 {
-              color: ${currentTheme.primary.hex};
+              color: #53d894;
             }
           }
 
           &__secondary {
             h2 {
-              color: ${currentTheme.secondary.hex};
+              color: #fff;
             }
           }
 
@@ -67,7 +67,7 @@ export default function Caption({
           }
 
           &__description {
-            color: ${onWhiteBackground ? currentTheme.darkBlue.hex : currentTheme.textDarkBlue.hex};
+            color: #fff;
           }
         }
       `}</style>

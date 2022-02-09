@@ -12,6 +12,7 @@ const staticStyles = css.global`
     justify-content: center;
     position: relative;
     z-index: 5;
+
     @include respond-to(xl) {
       margin: 60px auto;
     }
@@ -24,6 +25,7 @@ const staticStyles = css.global`
       }
 
       span {
+        color: #fff;
         font-size: $medium;
         margin-right: 20px;
         @include respond-to(xl) {
@@ -33,6 +35,7 @@ const staticStyles = css.global`
     }
 
     .TextFAQLink__arrow {
+      color: #fff !important;
       width: 9px;
       height: 9px;
       &:after {

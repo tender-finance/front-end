@@ -128,6 +128,7 @@ const staticStyles = css.global`
       justify-content: center;
     }
     &__bottom--text {
+      color: #fff !important;
       font-size: $large;
       margin-bottom: 30px;
       @include respond-to(xl) {

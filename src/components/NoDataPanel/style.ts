@@ -6,6 +6,12 @@ const staticStyles = css.global`
   @import 'src/_mixins/screen-size';
 
   .NoDataPanel {
+    & h2 {
+      color: #53d894 !important;
+    }
+    & .Caption__description {
+      color: #fff !important;
+    }
     flex: 1;
     display: flex;
     flex-direction: column;

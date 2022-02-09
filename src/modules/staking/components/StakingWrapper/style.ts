@@ -124,6 +124,7 @@ const staticStyles = css.global`
 
     .StakingWrapper__link {
       width: 100%;
+      color: #000;
     }
     .StakingWrapper__button {
       width: 100%;
@@ -263,6 +264,13 @@ const staticStyles = css.global`
     }
 
     .StakingWrapper__row {
+      & p {
+        color: #fff !important;
+      }
+      & span {
+        color: #fff !important;
+      }
+      color: #fff !important;
       margin-bottom: 40px;
       @include respond-to(xl) {
         margin-bottom: 25px;

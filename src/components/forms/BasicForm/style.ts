@@ -8,6 +8,12 @@ const staticStyles = css.global`
   .BasicForm {
     max-width: 550px;
     margin: 0 auto;
+    & div {
+      color: #fff !important;
+    }
+    & p {
+      color: #fff !important;
+    }
 
     &__warning {
       max-width: 430px;
