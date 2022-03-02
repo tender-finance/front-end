@@ -67,7 +67,7 @@
     "react-tooltip": "^4.2.21",
     "reflect-metadata": "^0.1.13",
     "strip-hex-prefix": "^1.0.0",
-    "styled-jsx": "^4.0.1",
+    "styled-jsx": "^5.0.0",
     "subscriptions-transport-ws": "^0.10.0",
     "tsparticles": "^1.36.0",
     "use-debounce": "^7.0.0",
